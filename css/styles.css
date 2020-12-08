@@ -88,7 +88,44 @@ body {
     border: 2px solid #3f0c1f;
 }
 
-/* END HEADER */
+#menu-tile, #special-tile, #map-tile {
+    height: 250px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    border: 2px solid #3f0c1f;
+    overflow: hidden;
+}
+
+#menu-tile:hover, #special-tile:hover, #map-tile:hover {
+    box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+    background: url('../images/menu-tile.jpg') no-repeat;
+    background-position: center;
+}
+
+#special-tile {
+    background: url('../images/specials-tile.jpg') no-repeat;
+    background-position: center;
+}
+
+#menu-tile span, #special-tile span , #map-tile span {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    background-color: #000000;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+
+/* END HOME PAGE */
 
 @media (min-width:1200px) {
     .jumbotron {
@@ -151,13 +188,17 @@ body {
     }
 
     #call-btn {   /* boton call*/
-        font-size: 1.5em;
         display: block;
         margin: 0 20px;
         padding: 10px;
         border: 2px solid #ffffff;
         background-color: #f6b319;
         color: #951c49;
+        
+    }
+
+    #call-btn span {
+        font-size: 1.5em;
     }
 
     #xs-deliver { /* text boton call we delivery */
@@ -170,5 +211,23 @@ body {
     .container .jumbotron {
         margin-top: 30px;
         padding: 0;
+    }
+
+    #menu-tile, #special-tile {
+        width: 360px;
+        margin: 0 auto 15px;
+    }
+}
+
+/* supex extra small devices only*/
+@media (max-width : 767px) {
+    #menu-tile, #special-tile {
+        width: 280px; /* tamaño imagenes inferior jumbotron */ 
+        margin: 0 auto 15px;
+    }
+
+    .navbar-brand h1 {
+        padding-top: 5px; /* resturant name */
+        font-size: 6vw;
     }
 }
